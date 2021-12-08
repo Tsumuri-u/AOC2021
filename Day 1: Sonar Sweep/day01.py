@@ -15,7 +15,14 @@ def part_one():
     print("Part 1: " + str(answer))
     
 def part_two():
-    return
+    currWindow = -1
+    answer = 0
+    for i in range(len(data) - 2):
+        tempWindow = int(data[i]) + int(data[i + 1]) + int(data[i + 2])
+        if currWindow >= 0 and tempWindow > currWindow:
+            answer += 1;
+        currWindow = tempWindow
+    print("Part 2: " + str(answer))
     
 part_one()
 part_two()
