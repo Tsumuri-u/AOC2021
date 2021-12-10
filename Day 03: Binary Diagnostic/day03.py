@@ -32,7 +32,15 @@ def part_one():
     answer = (int(gammaRate, 2)) * (int(epsilonRate, 2))
     print("Part 1: " + str(answer))
     
+def part_two():
+    array = data.split()
     
-    
-part_one()
+    for i in range(12):
+        
+        j = i
+        while j < len(data):
+            
+            j += 13
 
+part_one()
+part_two()
